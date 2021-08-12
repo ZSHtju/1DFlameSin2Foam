@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
 			if(tmp.size() > 0)
 			count++;
 		}
-		label NN = count;
+		label NN = count-1;//skip the first line
 		Info << count << endl;
 		scalarList d(NN,0.);
 		scalarList TT(NN,0.);
@@ -126,6 +126,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			char sline[300];
+			myfile.getline(sline,300); //skip the first line
 			for(label i = 0; i < NN ; i++)
 			{
 				for(label j = 0; j < (Y.size()+2); j++)
