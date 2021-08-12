@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 		Info<< "Reading  1D Flame data file" << endl;
 
 		Info<< "Please make sure the scalar in SI unit" << endl;
-		ifstream fileRow("1DFlame.dat");
+		ifstream fileRow("./constant/1DFlame.dat");
 		string tmp;
 		label count = 0;
 
@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
 			);
 		}
 		
-		ifstream myfile("1DFlame.dat");
+		ifstream myfile("./constant/1DFlame.dat");
 		if (myfile.fail())
 		{
 			Info << " file not found, the name of the file shoule be 1DFlame.dat" << endl;
